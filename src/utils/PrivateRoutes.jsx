@@ -3,8 +3,9 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 const Profile = lazy(() => import('../pages/Profile'));
 const About = lazy(() => import('../pages/About'));
 const Contact = lazy(() => import('../pages/Contact'));
-const FAQ = lazy(() => import('../pages/FAQ'));
-const Login = lazy(() => import('../pages/Login'));
+// const FAQ = lazy(() => import('../pages/FAQ'));
+import FAQ  from'../pages/FAQ'
+
 import { Navbar } from '../components/Navbar';
 
 
