@@ -5,8 +5,8 @@ const Login = ({ setIsAuthenticated }) => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    setIsAuthenticated(true); // Set the user as authenticated
-    navigate('/profile');     // Redirect to the private route, e.g., profile
+    setIsAuthenticated(true);
+    navigate('/profile');    
   };
 
   return (
@@ -18,6 +18,8 @@ const Login = ({ setIsAuthenticated }) => {
       >
         Log In
       </button>
+    {console.log("login is rendered")}
+
     </div>
   );
 };
