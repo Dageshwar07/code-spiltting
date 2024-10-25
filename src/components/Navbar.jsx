@@ -1,11 +1,16 @@
 import { Link, useNavigate } from 'react-router-dom';
-
+import { toast } from 'react-toastify';
 export const Navbar = ({ setIsAuthenticated }) => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    setIsAuthenticated(false); // Update authentication state
-    navigate('/login'); // Redirect to login page
+
+    setTimeout(() => {
+      setIsAuthenticated(false);
+      navigate('/login');
+    toast.success('Logout successfully!');
+
+    });
   };
   return (
     <nav className="bg-blue-600 text-white py-4 shadow-lg">

@@ -1,7 +1,6 @@
 // Login.jsx
 import React, { useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 const Login = ({ setIsAuthenticated }) => {
   const [username, setUsername] = useState('');
@@ -10,17 +9,17 @@ const Login = ({ setIsAuthenticated }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Hardcoded credentials
     const validUsername = 'dageshwar';
     const validPassword = 'admin@123';
 
     // Check if the entered credentials are valid
     if (username === validUsername && password === validPassword) {
-      setIsAuthenticated(true); // Set authentication state to true
+      setTimeout(() => {
+      setIsAuthenticated(true);
+      }, 1000);
       toast.success('login successfully!');
 
     } else {
-      // Show toast notification for invalid credentials
       toast.error('Invalid username or password!');
     }
   };
@@ -53,7 +52,7 @@ const Login = ({ setIsAuthenticated }) => {
         </div>
         <button type="submit" className="bg-blue-500 text-white rounded px-4 py-2">Login</button>
       </form>
-      <ToastContainer /> {/* Include ToastContainer for toast notifications */}
+      <ToastContainer />
     </div>
   );
 };

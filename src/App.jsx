@@ -1,5 +1,5 @@
 import {useState } from 'react';
-import { BrowserRouter, Navigate, Route, Routes, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { PrivateRoutes } from './utils/PrivateRoutes';
 import { PublicRoutes } from './utils/PublicRoutes';
 
