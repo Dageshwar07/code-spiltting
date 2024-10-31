@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <>
     
-    <div>Contact</div>
+    <div>this is Contact page </div>
     {console.log("contact is rendered")}
   
     </>
